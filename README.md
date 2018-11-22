@@ -1,7 +1,17 @@
 # README
 
+## Setup
+
 ```
-rake db:create
-rake db:migrate
-rake db:seed
+bundle
+yarn install
+rake db:setup
 ```
+
+## Usage
+
+```
+rails s
+```
+
+Go to `localhost:3000/pages/`
