@@ -1,4 +1,4 @@
-import { action, observable } from 'mobx';
+import {action, observable} from 'mobx';
 import EditorStore from './editor_store';
 
 export class RootStore {

@@ -1,9 +1,8 @@
-import { observable, computed } from 'mobx';
-
+import {observable, computed} from 'mobx';
 
 export interface TransitionProps {
   id: number;
-  title: string
+  title: string;
 }
 
 class Todo {

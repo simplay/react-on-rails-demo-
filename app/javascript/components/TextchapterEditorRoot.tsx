@@ -5,16 +5,13 @@ import rootStore from '../stores/root_store';
 import HelloWorld from './HelloWorld';
 
 class TextchapterEditorRoot extends React.Component {
-  constructor(params:any) {
+  constructor(params: any) {
     super(params);
   }
 
   render() {
     return (
-      <Provider
-        rootStore={rootStore}
-        editorStore={rootStore.editor}
-      >
+      <Provider rootStore={rootStore} editorStore={rootStore.editor}>
         <div>
           <HelloWorld />
         </div>

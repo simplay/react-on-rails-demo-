@@ -1,11 +1,9 @@
-import {
-  observable, action, reaction, computed
-} from 'mobx';
+import {observable, action, reaction, computed} from 'mobx';
 
-import { getTodos } from '../api/todos';
+import {getTodos} from '../api/todos';
 import Todo from '../models/todo';
 
-import { RootStore } from './root_store';
+import {RootStore} from './root_store';
 
 class EditorStore {
   protected readonly root: RootStore;
@@ -20,17 +18,14 @@ class EditorStore {
   @action loadData() {
     getTodos().then(({data}) => {
       const todos = data.map(params => {
-        return new Todo(params)
-      })
-      this.todos.replace(todos)
+        return new Todo(params);
+      });
+      this.todos.replace(todos);
     });
-
   }
 
   @computed get greetings() {
-    return this.todos.map(todo => (
-      todo.description
-    ));
+    return this.todos.map(todo => todo.description);
   }
 }
 
